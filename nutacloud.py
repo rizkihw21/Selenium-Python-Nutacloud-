@@ -1,7 +1,7 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
+from selenium import webdriver # type: ignore
+from selenium.webdriver.common.by import By # type: ignore
+from selenium.webdriver.chrome.service import Service # type: ignore
+from webdriver_manager.chrome import ChromeDriverManager # type: ignore
 
 # Inisialisasi driver Chrome
 options = webdriver.ChromeOptions()
@@ -38,6 +38,6 @@ penjualan_text = penjualan_hari_ini.text
 expected_text = "Penjualan Hari ini"  # Ganti dengan teks yang kamu harapkan muncul
 assert penjualan_text == expected_text, f"Teks penjualan tidak sesuai: '{penjualan_text}' != '{expected_text}'"
 
-print("Assertion passed: Teks penjualan sesuai.")
+print("Assertion passed: Teks sesuai.")
 
 driver.quit()
